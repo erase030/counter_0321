@@ -10,11 +10,23 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var lbl: UILabel!
+    var count = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        lbl.text = "0"
     }
 
-
+    @IBAction func btn(_ sender: Any) {
+        if(count<9){
+            count+=1;
+            lbl.text="\(count)"
+        }else{
+            count = 0
+            lbl.text = "0"
+        }
+    }
+    
 }
 
